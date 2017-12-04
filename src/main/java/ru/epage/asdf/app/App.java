@@ -27,7 +27,7 @@ public class App
             System.out.println(str);
         }
 
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
 
         System.out.println(list.get((int)(Math.random() * list.size())));
         System.out.println(list.get((int)(Math.random() * list.size())));
