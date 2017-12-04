@@ -10,7 +10,7 @@ public class ElfMage extends Person {
      *
      * @param actions list of skills and abilities of person
      */
-    ElfMage(List<Action> actions) {
+    public ElfMage(List<Action> actions) {
         super(actions);
     }
 }

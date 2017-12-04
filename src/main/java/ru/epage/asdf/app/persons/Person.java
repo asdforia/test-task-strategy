@@ -19,7 +19,7 @@ public class Person {
      * Person Constructor
      * @param actions list of skills and abilities of person
      */
-    Person(List<Action> actions) {
+    public Person(List<Action> actions) {
         this.health = 100;
         this.flag = 0;
         this.actions = actions;
