@@ -2,17 +2,21 @@ package ru.epage.asdf.app;
 
 import ru.epage.asdf.app.teams.Team;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Battle {
-    List<Team> teams = new ArrayList<Team>();
+    List<Team> teams;
 
-    public void addTeam(Team team) {
-        this.teams.add(team);
+    Team nextMove() {
+        return this.teams.get((int)(Math.random() * this.teams.size()));
     }
 
-    public List<Team> getTeams() {
-        return this.teams;
+    void createPairOppositeForce(List<Team> allteams) {
+        this.teams.add(allteams.get((int)(Math.random()) * allteams.size()));
+        Team temp = allteams.get((int)(Math.random()) * allteams.size());
+        do {
+            temp = allteams.get((int)(Math.random()) * allteams.size());
+        } while (this.teams.get(0).getType() == !temp.getType());
+
     }
 }
